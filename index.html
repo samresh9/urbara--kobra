@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <!--header-->
+   <div>
+       <div class=" flex flex-col bg-cover bg-center min-h-screen bg-fixed " style="background-image: url(/image/home.JPG);">
+          <div class=" z-40 fixed p-5 bg-lime-300 opacity-80 w-full ">
+              <div class=" flex items-center justify-center gap-10">
+              <!--logo-->
+              <div class=""><img src="/image/logo.jpg"></div>
+              <!--menu-->
+              <ul class="hidden md:flex  gap-10">
+                  <li>HOME</li>
+                  <li>GALLERY</li>
+                  <li>ABOUT</li>
+                  <li>CONTACT</li>
+                  <li>MAP</li>
+              </ul>
+              <div class="flex  md:hidden">
+                  <button class="mobile-menu-button">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                  </svg>
+                </button>
+                
+              </div>
+              
+          </div>
+          <!--mobile menu-->
+          <div>
+                <ul class="hidden md:hidden leading-10 mobile-menu    text-center">
+                    <li>HOME</li>
+                    <li>GALLERY</li>
+                    <li>ABOUT</li>
+                    <li>CONTACT</li>
+                    <li>MAP</li>
+                </ul>
+            </div>
+        </div>
+       </div>
+   </div> 
+   <!--welcome-->
+   <div class="h-90 w-full p-24 ">
+       <div class="flex flex-col md:flex-row justify-between items-center gap-20 overflow-hidden text-justify ">
+           <div>Welcome <br>to our hoter</div>
+           <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus aut voluptatum nisi in dicta 
+               eligendi, aliquid, quidem quasi eveniet cum architecto adipisci iste autem mollitia. Quibusdam atque soluta dicta odit.</div>
+           <div>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit officia voluptatum illum, est natus harum adipisci 
+               perspiciatis pariatur? Similique omnis iure saepe labore unde animi exercitationem alias facere corrupti pariatur!</div>
+       </div>
+    </div>
+  
+   <!--GALLERY-->
+   <div class="grid  grid-cols-1  md:grid-cols-4 mt-5  min-h-screen">
+       <div class="w-full md:h-4/5 relative   hover:-translate-y-5 ">
+        <p id="ok" class=" absolute  top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-2xl font-bold text-slate-50">COFFEE</p>
+        <p id="welcome" class="hidden absolute  top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-2xl font-bold text-slate-50">Welcome</p>
+        
+           <img id="hov" class=" h-full object-cover " src="/image/coffee.png">
+           
+       </div>
+       <div class="w-full md:h-4/5 relative">
+           <p class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-2xl font-bold text-slate-50">FOOD</p>
+           <img id="hov" class="h-full object-cover " src="/image/turkey.png">
+       </div>
+       <div class="w-full md:h-4/5">
+           <img id="hov" class="h-full object-cover object-right" src="/image/IMG_8580.jpg">
+       </div>
+       <div class="w-full md:h-4/5">
+           <img id="hov" onmouseover="hov()" class="h-full object-cover" src="/image/rabbit.png">
+       </div>
+
+   </div>
+   
+  
+
+</body>
+<style>
+  #hov:hover #welcome {
+      display:block;
+      
+  }
+</style>
+<script>
+    //nav
+    const btn = document.querySelector("button.mobile-menu-button");
+    const menu = document.querySelector(".mobile-menu");
+    btn.addEventListener("click", () => {
+     menu.classList.toggle("hidden");   
+    });
+    /*hover
+   <-- const a = document.getElementById("hov");
+    const b = document.getElementById("ok");
+    const c = document.getElementById("welcome");
+    a.addEventListener("mouseup", () => {
+       c.classList.toggle('hidden');
+       b.style.display = 'none';
+
+    });
+    a.addEventListener("mousedown", () => {
+       
+        b.style.display = 'block';
+        c.style.display = 'none';
+       
+    });*/
+   
+</script>
+</html>
