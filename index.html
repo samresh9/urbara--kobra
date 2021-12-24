@@ -59,21 +59,29 @@
   
    <!--GALLERY-->
    <div class="grid  grid-cols-1  md:grid-cols-4 mt-5  min-h-screen">
-       <div class="w-full md:h-4/5 relative   hover:-translate-y-5 ">
-        <p id="ok" class=" absolute  top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-2xl font-bold text-slate-50">COFFEE</p>
-        <p id="welcome" class="hidden absolute  top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-2xl font-bold text-slate-50">Welcome</p>
+       <div id="gal-div" class="w-full md:h-4/5 relative   hover:-translate-y-5 hover:animate-pulse">
+           
+        <p id="p-after" class=" absolute  top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-2xl font-bold text-slate-50 ">COFFEE</p>
+        <p id="p-before" class="hidden absolute  top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-2xl font-bold text-slate-50">Welcome</p>
         
            <img id="hov" class=" h-full object-cover " src="/image/coffee.png">
            
        </div>
-       <div class="w-full md:h-4/5 relative">
-           <p class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-2xl font-bold text-slate-50">FOOD</p>
+       <div id="gal-div" class="w-full md:h-4/5 relative   hover:-translate-y-5 hover:animate-pulse ">
+        <p id="p-after" class=" absolute  top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-2xl font-bold text-slate-50">COFFEE</p>
+        <p id="p-before" class="hidden absolute  top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-2xl font-bold text-slate-50">Welcome</p>
            <img id="hov" class="h-full object-cover " src="/image/turkey.png">
        </div>
-       <div class="w-full md:h-4/5">
+       <div id="gal-div" class="w-full md:h-4/5 relative   hover:-translate-y-5 hover:animate-pulse">
+        <p id="p-after" class=" absolute  top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-2xl font-bold text-slate-50">COFFEE</p>
+        <p id="p-before" class="hidden absolute  top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-2xl font-bold text-slate-50">Welcome</p>
+
            <img id="hov" class="h-full object-cover object-right" src="/image/IMG_8580.jpg">
        </div>
-       <div class="w-full md:h-4/5">
+       <div id="gal-div" class="w-full md:h-4/5 relative   hover:-translate-y-5 hover:animate-pulse">
+        <p id="p-after" class=" absolute  top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-2xl font-bold text-slate-50">COFFEE</p>
+        <p id="p-before" class="hidden absolute  top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-2xl font-bold text-slate-50">Welcome</p>
+
            <img id="hov" onmouseover="hov()" class="h-full object-cover" src="/image/rabbit.png">
        </div>
 
@@ -95,21 +103,23 @@
     btn.addEventListener("click", () => {
      menu.classList.toggle("hidden");   
     });
-    /*hover
-   <-- const a = document.getElementById("hov");
-    const b = document.getElementById("ok");
-    const c = document.getElementById("welcome");
-    a.addEventListener("mouseup", () => {
-       c.classList.toggle('hidden');
-       b.style.display = 'none';
+    //hover
+    const galdiv = document.getElementById("gal-div");
+
+    const a = document.getElementById("hov");
+    const pafter = document.getElementById("p-after");
+    const pbefore = document.getElementById("p-before");
+    galdiv.addEventListener("mouseover", () => {
+       pafter.style.display = 'none';
+       pbefore.style.display = 'block';
+
 
     });
-    a.addEventListener("mousedown", () => {
+    galdiv.addEventListener("mouseout", () => {
+        pafter.style.display = 'block';
+        pbefore.style.display = 'none';
        
-        b.style.display = 'block';
-        c.style.display = 'none';
-       
-    });*/
+    });
    
 </script>
 </html>
